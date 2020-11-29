@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+    #new-message-form
+        h1 New Message
+        form(action="/new", method="post")
+            label(for="message") Message
+            textarea(name="messageText", cols="30", rows="10", required='true')
+            label(for="user") User
+            input(type="text", name="user", required="true")
+            input(type="submit", value="Submit")

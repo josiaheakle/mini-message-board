@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  #main-container
+    h1= title
+      for message in messages 
+        .message-container
+            h2= message.user
+            p= message.text
+            p= message.added
+      else 
+        h2 No messages
+
+
+
+  //- h1= title
+  //- p Welcome to #{title}
